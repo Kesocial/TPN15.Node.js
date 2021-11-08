@@ -72,7 +72,7 @@ function recuperar(pedido, respuesta) {
         const formulario = querystring.parse(info);
         respuesta.writeHead(200, { "Content-Type": "text/html" });
         const pagina =
-            `<!doctype html><html><head><link rel="stylesheet" href="style.css" /></head><body><div class="div">` +
+            `<!doctype html><html><head><link rel="stylesheet" href="style.css" /><title>Cifrado Cesar</title></head><body><div class="div">` +
             cifradoCesar(formulario["string"], parseInt(formulario["num"])) +
             `</div></body></html>`;
         respuesta.end(pagina);
